@@ -30,6 +30,12 @@ pipeline {
                 }
             }
         }
+        stage('Manual Approval') {
+            agent any
+            steps {
+                input message: "Approve the build and proceed to Deploy stage?"
+            }
+        }
         stage('Deploy') { 
             agent any
             environment { 
