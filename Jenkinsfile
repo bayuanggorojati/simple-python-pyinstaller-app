@@ -16,7 +16,7 @@ node {
             }
         }
     }
-    stage('Deliver'){
+    stage('Deploy'){
         withEnv(["VOLUME=\$(pwd)/sources:/src",
         'IMAGE=cdrx/pyinstaller-linux:python2']){
             try {
