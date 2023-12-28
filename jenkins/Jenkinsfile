@@ -33,7 +33,7 @@ pipeline {
         stage('Manual Approval') {
             agent any
             steps {
-                input message: "Approve the build and proceed to Deploy stage?"
+                input message: "Approve the test and proceed to the Deploy stage?"
             }
         }
         stage('Deploy') { 
